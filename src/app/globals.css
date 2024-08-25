@@ -4,7 +4,7 @@
 
 
 body{
-  @apply bg-secondary min-h-screen pt-16
+  @apply bg-secondary min-h-screen pt-6 md:pt-16
 }
 
 @layer components{
