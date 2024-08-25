@@ -2,32 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+body{
+  @apply bg-secondary min-h-screen pt-16
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components{
+  .start{
+    @apply  bg-dog-svg bg-cover bg-center bg-white
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.cell{
+  @apply w-6 h-6 md:w-10 md:h-10 border-white border-2
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.wall{
+  @apply bg-black z-10
+}
+
+
+.path{
+  @apply bg-white
+}
+
+.end{
+  @apply  bg-dog-food-svg bg-cover bg-center bg-white
+}
+
+.row{
+  @apply flex flex-row
+}
+
+.visited{
+  @apply  bg-dog-track-svg bg-cover bg-center scale-50
+}
+
+
+.meetEnd {
+  @apply bg-dog-food-svg bg-cover bg-center -rotate-180 transition-transform bg-white
 }
